@@ -16,108 +16,152 @@
     <div class="page-shell">
       <header class="topbar">
         <a class="logo" href="#">
-          <span class="logo-mark">B</span>
-          <span>BoostSMS</span>
+          <img src="assets/logo-boostsms.png" alt="BoostSMS" class="logo-image" />
         </a>
         <nav class="desktop-nav">
-          <a href="#">หน้าหลัก</a>
-          <a href="#">ฟีเจอร์</a>
+          <a href="#">หน้าแรก</a>
+          <a href="#">เกี่ยวกับเรา</a>
+          <a href="#">บริการของเรา</a>
           <a href="#">แพ็กเกจ</a>
-          <a href="#">รีวิว</a>
           <a href="#">บทความ</a>
-          <a href="#">ติดต่อเรา</a>
+          <a href="#">คู่มือ</a>
+          <a href="#">คำถามที่พบบ่อย</a>
+          <a href="#">ติดต่อฝ่ายขาย</a>
         </nav>
-        <button class="btn btn-primary">สมัครสมาชิก</button>
+        <div class="topbar-actions">
+          <a class="nav-login" href="#">เข้าสู่ระบบ</a>
+          <button class="btn btn-primary btn-signup">
+            สมัครฟรี
+            <span class="arrow" aria-hidden="true">→</span>
+          </button>
+        </div>
       </header>
 
       <main>
-        <section class="hero section-light">
-          <div class="hero-copy">
-            <p class="eyebrow">บริการส่ง SMS Marketing</p>
-            <h1>ออนไลน์อันดับ 1 ในไทย</h1>
-            <p>
-              จัดการแคมเปญในหน้าเดียว ส่งไว เสถียร รองรับหลายเครือข่าย พร้อมรายงานผล
-              แบบเรียลไทม์ เหมาะกับทุกขนาดธุรกิจ
-            </p>
-            <div class="hero-chip-grid">
-              <div class="chip"><strong>10M+</strong><span>SMS ต่อเดือน</span></div>
-              <div class="chip"><strong>500+</strong><span>ลูกค้าใช้งาน</span></div>
-              <div class="chip"><strong>99.9%</strong><span>ความเสถียร</span></div>
-            </div>
-            <div class="hero-actions">
-              <button class="btn btn-primary">เริ่มต้นใช้งาน</button>
-              <button class="btn btn-ghost">ดูแพ็กเกจ</button>
-            </div>
-          </div>
-          <div class="hero-phone-wrap">
-            <div class="phone-mock">
-              <div class="phone-notch"></div>
-              <div class="phone-screen">
-                <h4>BoostSMS</h4>
-                <p>Broadcast สำเร็จ</p>
+        <section class="hero">
+          <div class="hero-card">
+            <div class="hero-copy">
+              <h1>
+                บริการส่ง SMS Marketing<br />
+                ออนไลน์อันดับ 1 ในไทย
+              </h1>
+              <p class="hero-lead">
+                ใช้งานง่าย ส่งได้รวดเร็ว แม่นยำ รองรับ OTP และการแจ้งเตือนทุกรูปแบบ
+                ควบคุมต้นทุนได้ชัดเจน พร้อมมาตรฐานระดับองค์กร
+              </p>
+              <div class="price-callout">
+                <p class="price-headline">
+                  เริ่มต้นถูกสุดราคา <strong>฿0.17</strong> ต่อข้อความ
+                </p>
+                <ul class="price-checks">
+                  <li><span class="check" aria-hidden="true">✓</span>ไม่มีค่าแรกเข้า</li>
+                  <li><span class="check" aria-hidden="true">✓</span>เริ่มใช้ได้ทันที</li>
+                  <li><span class="check" aria-hidden="true">✓</span>มีทีมดูแล 24 ชั่วโมง</li>
+                </ul>
+                <button class="btn btn-primary">สมัครรับ 15 SMS ฟรี !</button>
               </div>
             </div>
+            <div class="hero-phone-wrap">
+              <img
+                src="assets/hero-phone-hand.png"
+                alt="มือถือแสดงรีวิวลูกค้า BoostSMS"
+                class="hero-phone-image"
+              />
+            </div>
+          </div>
+
+          <div class="hero-stats">
+            <div class="stat"><strong>10M+</strong><span>SMS ส่งสำเร็จ</span></div>
+            <div class="stat"><strong>500+</strong><span>ธุรกิจไว้วางใจ</span></div>
+            <div class="stat"><strong>99.9%</strong><span>Uptime</span></div>
+            <div class="stat"><strong>&lt;3s</strong><span>ส่งถึงปลายทาง</span></div>
           </div>
         </section>
 
         <section class="sms-service section-blue">
-          <div class="service-top">
-            <h2>บริการ SMS ครบวงจร</h2>
+          <div class="service-header">
+            <h2>บริการ <span class="accent">SMS</span> ครบทุกความต้องการ</h2>
             <div class="pill-tabs">
-              <button class="tab active">ส่ง SMS</button>
-              <button class="tab">OTP SMS</button>
-              <button class="tab">SML API</button>
-              <button class="tab">Report</button>
+              <button class="tab active">Web SMS</button>
+              <button class="tab">SMS OTP</button>
+              <button class="tab">SMS API</button>
+              <button class="tab">SMS Report</button>
             </div>
           </div>
           <div class="service-content">
             <div class="service-copy">
-              <p>
-                ระบบส่งข้อความที่ใช้งานง่าย มีแดชบอร์ดพร้อมรายงานผล และเครื่องมือช่วยแยกกลุ่ม
-                ลูกค้าเพื่อเพิ่มประสิทธิภาพแคมเปญ
+              <p class="service-lead">
+                ระบบส่งข้อความ SMS ผ่านหน้าเว็บโดยไม่ต้องเขียนโค้ด
+                <br />รองรับการส่งข้อความจำนวนมากได้อย่างรวดเร็ว
               </p>
-              <ul>
-                <li>ส่งข้อความได้รวดเร็วระดับวินาที</li>
-                <li>รองรับหลายเครือข่ายในไทย</li>
-                <li>ติดตามผลแบบเรียลไทม์</li>
-                <li>เชื่อมต่อ API ได้ทันที</li>
-              </ul>
-              <div class="carrier-banner">
-                <img src="assets/carrier-network.png" alt="เครือข่าย True DTAC AIS" />
+              <div class="carrier-card">
+                <p class="carrier-title">ครอบคลุมทุกเครือข่ายในประเทศไทย</p>
+                <div class="carrier-logos">
+                  <img src="assets/carrier-network.png" alt="True DTAC AIS" />
+                </div>
               </div>
+              <ul class="service-features">
+                <li>เลือกส่งเฉพาะกลุ่มที่ต้องการได้</li>
+                <li>ปรับแต่งข้อความได้อย่างยืดหยุ่น เพิ่มโอกาศเปิดอ่าน</li>
+                <li>รองรับการส่งผ่าน เว็บไซต์ และ API</li>
+                <li>ระบบมีความเสถียรสูง Uptime 99%</li>
+                <li>รองรับการส่งข้อความระดับหลายล้านข้อความต่อวัน</li>
+              </ul>
             </div>
-            <div class="dashboard-mock">
-              <img src="assets/dashboard.png" alt="Dashboard SMS" class="dashboard-image" />
+            <div class="service-dashboard">
+              <img src="assets/dashboard.png" alt="Dashboard SMS" />
             </div>
           </div>
         </section>
 
         <section class="features section-light">
           <div class="section-title">
-            <p class="eyebrow">โซลูชันที่ตอบโจทย์</p>
-            <h2>ตอบโจทย์ธุรกิจของคุณ</h2>
+            <h2>โซลูชันที่ <span class="accent-blue">ตอบโจทย์</span> ธุรกิจคุณ</h2>
           </div>
           <div class="feature-layout">
             <div class="feature-cards">
-              <article class="f-card">
-                <h3>ส่งได้แม่นยำ</h3>
-                <p>เลือกกลุ่มเป้าหมายได้ละเอียด ลดต้นทุนและเพิ่ม Conversion</p>
-              </article>
-              <article class="f-card">
-                <h3>ใช้งานง่าย</h3>
-                <p>อินเทอร์เฟซทันสมัย เริ่มแคมเปญได้ทันทีโดยไม่ซับซ้อน</p>
-              </article>
-              <article class="f-card">
-                <h3>รายงานครบ</h3>
-                <p>สรุปผลส่งสำเร็จ เปิดอ่าน และลิงก์คลิกแบบเรียลไทม์</p>
-              </article>
-              <article class="f-card">
-                <h3>พร้อมขยาย</h3>
-                <p>เหมาะกับทั้ง SME และองค์กรขนาดใหญ่ในระบบเดียว</p>
-              </article>
+            <article class="f-card">
+              <span class="f-icon f-icon-sms">
+                <svg viewBox="0 0 40 40" fill="currentColor">
+                  <path d="M8 4 h24 a4 4 0 0 1 4 4 v16 a4 4 0 0 1 -4 4 h-13 l-7 7 v-7 h-4 a4 4 0 0 1 -4 -4 v-16 a4 4 0 0 1 4 -4 z"/>
+                  <text x="20" y="18" font-size="9" font-weight="800" fill="#fff" text-anchor="middle" dominant-baseline="middle" font-family="Prompt, sans-serif">SMS</text>
+                </svg>
+              </span>
+              <h3>ส่งถึงทุกข้อความ</h3>
+              <p>มั่นใจทุกข้อความไม่ตกหล่น พร้อมเช็กสถานะได้ทันที</p>
+            </article>
+            <article class="f-card">
+              <span class="f-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/>
+                </svg>
+              </span>
+              <h3>รองรับหลายชื่อผู้ส่ง</h3>
+              <p>จัดการง่ายบริหารได้หลายแบรนด์ สลับใช้งานได้สะดวก</p>
+            </article>
+            <article class="f-card">
+              <span class="f-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M16 6l2.29 2.29-4.88 4.88-4-4L2 16.59 3.41 18l6-6 4 4 6.3-6.29L22 12V6z"/>
+                </svg>
+              </span>
+              <h3>รู้ต้นทุนได้ชัดเจน</h3>
+              <p>ตรวจสอบค่าใช้จ่ายได้ทุกการส่ง บริหารงบประมาณได้คุ้มค่าที่สุด</p>
+            </article>
+            <article class="f-card">
+              <span class="f-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <rect x="5" y="11" width="3" height="10" rx="1"/>
+                  <rect x="10.5" y="7" width="3" height="14" rx="1"/>
+                  <rect x="16" y="14" width="3" height="7" rx="1"/>
+                </svg>
+              </span>
+              <h3>รายงาน Realtime</h3>
+              <p>รายงานละเอียดสรุปผลเรียลไทม์ ช่วยให้คุณวางแผนกลยุทธ์ธุรกิจได้อย่างแม่นยำ</p>
+            </article>
             </div>
-            <div class="chart-mock">
-              <div class="curve"></div>
+            <div class="feature-chart">
+              <img src="assets/previews/Group_1410065781_preview.png" alt="SMS Dashboard Analytics" />
             </div>
           </div>
         </section>
@@ -320,6 +364,10 @@
         </div>
       </footer>
     </div>
+
+    <a href="#" class="chat-popup" aria-label="แชทกับเรา">
+      <img src="assets/chat-popup.png" alt="Chat" />
+    </a>
 
     <script src="script.js"></script>
   </body>
