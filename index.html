@@ -81,35 +81,84 @@
         <section class="sms-service section-blue">
           <div class="service-header">
             <h2>บริการ <span class="accent">SMS</span> ครบทุกความต้องการ</h2>
-            <div class="pill-tabs">
-              <button class="tab active">Web SMS</button>
-              <button class="tab">SMS OTP</button>
-              <button class="tab">SMS API</button>
-              <button class="tab">SMS Report</button>
+            <div class="pill-tabs" role="tablist">
+              <button class="tab active" data-target="websms">Web SMS</button>
+              <button class="tab" data-target="otp">SMS OTP</button>
+              <button class="tab" data-target="api">SMS API</button>
+              <button class="tab" data-target="report">SMS Report</button>
             </div>
           </div>
-          <div class="service-content">
-            <div class="service-copy">
-              <p class="service-lead">
-                ระบบส่งข้อความ SMS ผ่านหน้าเว็บโดยไม่ต้องเขียนโค้ด
-                <br />รองรับการส่งข้อความจำนวนมากได้อย่างรวดเร็ว
+
+          <div class="service-panel active" data-panel="websms">
+            <div class="service-content">
+              <div class="service-copy">
+                <p class="service-lead">
+                  ระบบส่งข้อความ SMS ผ่านหน้าเว็บโดยไม่ต้องเขียนโค้ด
+                  <br />รองรับการส่งข้อความจำนวนมากได้อย่างรวดเร็ว
+                </p>
+                <div class="carrier-card">
+                  <p class="carrier-title">ครอบคลุมทุกเครือข่ายในประเทศไทย</p>
+                  <div class="carrier-logos">
+                    <img src="assets/carrier-network.png" alt="True DTAC AIS" />
+                  </div>
+                </div>
+                <ul class="service-features">
+                  <li>เลือกส่งเฉพาะกลุ่มที่ต้องการได้</li>
+                  <li>ปรับแต่งข้อความได้อย่างยืดหยุ่น เพิ่มโอกาศเปิดอ่าน</li>
+                  <li>รองรับการส่งผ่าน เว็บไซต์ และ API</li>
+                  <li>ระบบมีความเสถียรสูง Uptime 99%</li>
+                  <li>รองรับการส่งข้อความระดับหลายล้านข้อความต่อวัน</li>
+                </ul>
+              </div>
+              <div class="service-dashboard">
+                <img src="assets/dashboard.png" alt="Dashboard SMS" />
+              </div>
+            </div>
+          </div>
+
+          <div class="service-panel" data-panel="otp">
+            <div class="otp-stage">
+              <p class="otp-lead">
+                ระบบส่งรหัส OTP อัตโนมัติ พร้อมใช้งานทันที
+                <br />รองรับการยืนยันตัวตนได้อย่างรวดเร็วและปลอดภัย
               </p>
-              <div class="carrier-card">
-                <p class="carrier-title">ครอบคลุมทุกเครือข่ายในประเทศไทย</p>
-                <div class="carrier-logos">
-                  <img src="assets/carrier-network.png" alt="True DTAC AIS" />
+              <img class="otp-dashboard-img" src="assets/otp-dashboard.png" alt="OTP dashboard" />
+              <img class="otp-phone-img" src="assets/otp-phone.png" alt="OTP phone preview" />
+              <span class="otp-envelope-wrap" aria-hidden="true">
+                <img class="otp-envelope-img" src="assets/otp-envelope.png" alt="" />
+                <i class="otp-envelope-dot">1</i>
+              </span>
+            </div>
+          </div>
+
+          <div class="service-panel" data-panel="api">
+            <div class="service-content api-content">
+              <div class="service-copy">
+                <h3 class="service-lead api-lead">
+                  ให้ระบบทำงานอัตโนมัติ ด้วยการเชื่อม API
+                  <img src="assets/api-sparkle.png" alt="" class="sparkle" aria-hidden="true" />
+                </h3>
+                <p class="service-sub">
+                  ส่ง SMS ผ่านระบบของคุณได้ทันที ไม่ว่าจะเตือนชำระเงิน, แจ้งเตือน,
+                  สถานะคำสั่งซื้อ, แจ้งเตือนโปรโมชั่นพิเศษ หรือข้อความของคุณเองทุกรูปแบบ
+                  ประหยัดเวลาด้วยการเชื่อมต่อเพียงครั้งเดียว ปรึกษาทีมพัฒนาของเรา
+                  เพื่อรับคำแนะนำในการเชื่อมต่อได้ฟรี!
+                </p>
+                <div class="service-ctas">
+                  <button class="btn btn-outline-light">คู่มือการเชื่อมต่อ API</button>
+                  <button class="btn btn-yellow">ปรึกษาทีมพัฒนา ฟรี !</button>
                 </div>
               </div>
-              <ul class="service-features">
-                <li>เลือกส่งเฉพาะกลุ่มที่ต้องการได้</li>
-                <li>ปรับแต่งข้อความได้อย่างยืดหยุ่น เพิ่มโอกาศเปิดอ่าน</li>
-                <li>รองรับการส่งผ่าน เว็บไซต์ และ API</li>
-                <li>ระบบมีความเสถียรสูง Uptime 99%</li>
-                <li>รองรับการส่งข้อความระดับหลายล้านข้อความต่อวัน</li>
-              </ul>
+              <div class="service-visual api-visual">
+                <img src="assets/api-code.png" alt="API request and response example" />
+              </div>
             </div>
-            <div class="service-dashboard">
-              <img src="assets/dashboard.png" alt="Dashboard SMS" />
+          </div>
+
+          <div class="service-panel" data-panel="report">
+            <div class="report-subtitle">แดชบอร์ดรายงานผลการส่ง SMS แบบครบวงจร</div>
+            <div class="service-visual report-visual-full">
+              <img src="assets/report-visual.png" alt="SMS report dashboard" />
             </div>
           </div>
         </section>
@@ -121,40 +170,29 @@
           <div class="feature-layout">
             <div class="feature-cards">
             <article class="f-card">
-              <span class="f-icon f-icon-sms">
-                <svg viewBox="0 0 40 40" fill="currentColor">
-                  <path d="M8 4 h24 a4 4 0 0 1 4 4 v16 a4 4 0 0 1 -4 4 h-13 l-7 7 v-7 h-4 a4 4 0 0 1 -4 -4 v-16 a4 4 0 0 1 4 -4 z"/>
-                  <text x="20" y="18" font-size="9" font-weight="800" fill="#fff" text-anchor="middle" dominant-baseline="middle" font-family="Prompt, sans-serif">SMS</text>
-                </svg>
+              <span class="f-icon">
+                <img src="assets/feature-sms.png" alt="" />
               </span>
               <h3>ส่งถึงทุกข้อความ</h3>
               <p>มั่นใจทุกข้อความไม่ตกหล่น พร้อมเช็กสถานะได้ทันที</p>
             </article>
             <article class="f-card">
               <span class="f-icon">
-                <svg viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/>
-                </svg>
+                <img src="assets/feature-sender.png" alt="" />
               </span>
               <h3>รองรับหลายชื่อผู้ส่ง</h3>
               <p>จัดการง่ายบริหารได้หลายแบรนด์ สลับใช้งานได้สะดวก</p>
             </article>
             <article class="f-card">
               <span class="f-icon">
-                <svg viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M16 6l2.29 2.29-4.88 4.88-4-4L2 16.59 3.41 18l6-6 4 4 6.3-6.29L22 12V6z"/>
-                </svg>
+                <img src="assets/feature-money.png" alt="" />
               </span>
               <h3>รู้ต้นทุนได้ชัดเจน</h3>
               <p>ตรวจสอบค่าใช้จ่ายได้ทุกการส่ง บริหารงบประมาณได้คุ้มค่าที่สุด</p>
             </article>
             <article class="f-card">
               <span class="f-icon">
-                <svg viewBox="0 0 24 24" fill="currentColor">
-                  <rect x="5" y="11" width="3" height="10" rx="1"/>
-                  <rect x="10.5" y="7" width="3" height="14" rx="1"/>
-                  <rect x="16" y="14" width="3" height="7" rx="1"/>
-                </svg>
+                <img src="assets/feature-chart.png" alt="" />
               </span>
               <h3>รายงาน Realtime</h3>
               <p>รายงานละเอียดสรุปผลเรียลไทม์ ช่วยให้คุณวางแผนกลยุทธ์ธุรกิจได้อย่างแม่นยำ</p>
@@ -167,66 +205,177 @@
         </section>
 
         <section class="award">
-          <img src="assets/award-garuda.png" alt="รางวัล กสทช" class="award-image" />
-          <h3>ได้รับการยอมรับด้านนวัตกรรม</h3>
-          <p>แพลตฟอร์มได้รับการคัดเลือกในโครงการสนับสนุนผู้ประกอบการด้านเทคโนโลยี</p>
+          <img src="assets/nbtc-seal.png" alt="ตรา กสทช" class="award-image" />
+          <h3>ใช้งานได้อย่างมั่นใจด้วยมาตรฐาน กสทช.</h3>
+          <p>
+            ได้รับการรับรองมาตรฐานในการให้บริการส่งข้อความสั้น (Short Message Service: SMS)<br />
+            โดยสำนักงานคณะกรรมการกิจการกระจายเสียง กิจการโทรทัศน์ และกิจการโทรคมนาคมแห่งชาติ
+          </p>
+          <a href="#" class="award-link">ดูใบอนุญาต</a>
         </section>
 
         <section class="pricing section-light">
           <div class="section-title center">
-            <p class="eyebrow">เลือกแพ็กเกจ</p>
-            <h2>แพ็กเกจที่เหมาะกับธุรกิจของคุณ</h2>
+            <h2>เลือกแพ็กเกจ</h2>
+            <p class="pricing-subtitle">ให้เหมาะกับประเภทและปริมาณการใช้งานของคุณ</p>
           </div>
           <div class="pricing-grid">
             <article class="plan">
-              <p class="plan-name">เริ่มต้น</p>
-              <h3>฿350</h3>
-              <p>300 SMS</p>
-              <button class="btn btn-ghost full">ซื้อเลย</button>
+              <p class="plan-label">แพ็กเกจ</p>
+              <h3 class="plan-price">฿350</h3>
+              <ul class="plan-details">
+                <li><span>ปริมาณการส่ง (ครั้ง)</span><strong>555</strong></li>
+                <li><span>ราคา/เครดิต</span><strong>฿0.63</strong></li>
+                <li><span>อายุการใช้งาน (เดือน)</span><strong>24 เดือน</strong></li>
+                <li><span>จำนวนชื่อผู้ส่ง</span><strong>1</strong></li>
+              </ul>
+              <ul class="plan-features">
+                <li>SMS Tracking</li>
+                <li>OTP Ready to use</li>
+              </ul>
+              <button class="btn btn-primary full">ซื้อเลย</button>
             </article>
             <article class="plan featured">
               <span class="badge">ยอดนิยม</span>
-              <p class="plan-name">แนะนำ</p>
-              <h3>฿500</h3>
-              <p>500 SMS</p>
-              <button class="btn btn-light full">ซื้อเลย</button>
+              <p class="plan-label">แพ็กเกจ</p>
+              <h3 class="plan-price">฿500</h3>
+              <ul class="plan-details">
+                <li><span>ปริมาณการส่ง (ครั้ง)</span><strong>862</strong></li>
+                <li><span>ราคา/เครดิต</span><strong>฿0.58</strong></li>
+                <li><span>อายุการใช้งาน (เดือน)</span><strong>24 เดือน</strong></li>
+                <li><span>จำนวนชื่อผู้ส่ง</span><strong>2</strong></li>
+              </ul>
+              <ul class="plan-features">
+                <li>SMS Tracking</li>
+                <li>OTP Ready to use</li>
+              </ul>
+              <button class="btn btn-featured full">ซื้อเลย</button>
             </article>
             <article class="plan">
-              <p class="plan-name">ธุรกิจเล็ก</p>
-              <h3>฿1,500</h3>
-              <p>1,500 SMS</p>
-              <button class="btn btn-ghost full">ซื้อเลย</button>
+              <p class="plan-label">แพ็กเกจ</p>
+              <h3 class="plan-price">฿1,500</h3>
+              <ul class="plan-details">
+                <li><span>ปริมาณการส่ง (ครั้ง)</span><strong>3,000</strong></li>
+                <li><span>ราคา/เครดิต</span><strong>฿0.50</strong></li>
+                <li><span>อายุการใช้งาน (เดือน)</span><strong>24 เดือน</strong></li>
+                <li><span>จำนวนชื่อผู้ส่ง</span><strong>5</strong></li>
+              </ul>
+              <ul class="plan-features">
+                <li>SMS Tracking</li>
+                <li>OTP Ready to use</li>
+              </ul>
+              <button class="btn btn-primary full">ซื้อเลย</button>
             </article>
             <article class="plan">
-              <p class="plan-name">ธุรกิจกลาง</p>
-              <h3>฿3,500</h3>
-              <p>3,500 SMS</p>
-              <button class="btn btn-ghost full">ซื้อเลย</button>
+              <p class="plan-label">แพ็กเกจ</p>
+              <h3 class="plan-price">฿3,500</h3>
+              <ul class="plan-details">
+                <li><span>ปริมาณการส่ง (ครั้ง)</span><strong>8,400</strong></li>
+                <li><span>ราคา/เครดิต</span><strong>฿0.42</strong></li>
+                <li><span>อายุการใช้งาน (เดือน)</span><strong>24 เดือน</strong></li>
+                <li><span>จำนวนชื่อผู้ส่ง</span><strong>10</strong></li>
+              </ul>
+              <ul class="plan-features">
+                <li>SMS Tracking</li>
+                <li>OTP Ready to use</li>
+              </ul>
+              <button class="btn btn-primary full">ซื้อเลย</button>
             </article>
             <article class="plan">
-              <p class="plan-name">องค์กร</p>
-              <h3>฿10,000</h3>
-              <p>10,000 SMS</p>
-              <button class="btn btn-ghost full">ซื้อเลย</button>
+              <p class="plan-label">แพ็กเกจ</p>
+              <h3 class="plan-price">฿10,000</h3>
+              <ul class="plan-details">
+                <li><span>ปริมาณการส่ง (ครั้ง)</span><strong>28,500</strong></li>
+                <li><span>ราคา/เครดิต</span><strong>฿0.35</strong></li>
+                <li><span>อายุการใช้งาน (เดือน)</span><strong>24 เดือน</strong></li>
+                <li><span>จำนวนชื่อผู้ส่ง</span><strong>15</strong></li>
+              </ul>
+              <ul class="plan-features">
+                <li>SMS Tracking</li>
+                <li>OTP Ready to use</li>
+              </ul>
+              <button class="btn btn-primary full">ซื้อเลย</button>
             </article>
             <article class="plan">
-              <p class="plan-name">โปร 30K</p>
-              <h3>฿30,000</h3>
-              <p>30,000 SMS</p>
-              <button class="btn btn-ghost full">ซื้อเลย</button>
+              <p class="plan-label">แพ็กเกจ</p>
+              <h3 class="plan-price">฿30,000</h3>
+              <ul class="plan-details">
+                <li><span>ปริมาณการส่ง (ครั้ง)</span><strong>98,000</strong></li>
+                <li><span>ราคา/เครดิต</span><strong>฿0.31</strong></li>
+                <li><span>อายุการใช้งาน (เดือน)</span><strong>36 เดือน</strong></li>
+                <li><span>จำนวนชื่อผู้ส่ง</span><strong>20</strong></li>
+              </ul>
+              <ul class="plan-features">
+                <li>SMS Tracking</li>
+                <li>OTP Ready to use</li>
+                <li>เจ้าหน้าที่ดูแลส่วนตัว</li>
+              </ul>
+              <button class="btn btn-primary full">ซื้อเลย</button>
             </article>
             <article class="plan">
-              <p class="plan-name">โปร 120K</p>
-              <h3>฿120,000</h3>
-              <p>120,000 SMS</p>
-              <button class="btn btn-ghost full">ซื้อเลย</button>
+              <p class="plan-label">แพ็กเกจ</p>
+              <h3 class="plan-price">฿120,000</h3>
+              <ul class="plan-details">
+                <li><span>ปริมาณการส่ง (ครั้ง)</span><strong>465,000</strong></li>
+                <li><span>ราคา/เครดิต</span><strong>฿0.26</strong></li>
+                <li><span>อายุการใช้งาน (เดือน)</span><strong>36 เดือน</strong></li>
+                <li><span>จำนวนชื่อผู้ส่ง</span><strong>ไม่จำกัด</strong></li>
+              </ul>
+              <ul class="plan-features">
+                <li>SMS Tracking</li>
+                <li>OTP Ready to use</li>
+                <li>เจ้าหน้าที่ดูแลส่วนตัว</li>
+              </ul>
+              <button class="btn btn-primary full">ซื้อเลย</button>
             </article>
             <article class="plan featured">
-              <span class="badge">คุ้มสุด</span>
-              <p class="plan-name">โปร 250K</p>
-              <h3>฿250,000</h3>
-              <p>250,000 SMS</p>
-              <button class="btn btn-light full">ซื้อเลย</button>
+              <span class="badge">สุดคุ้ม</span>
+              <p class="plan-label">แพ็กเกจ</p>
+              <h3 class="plan-price">฿250,000</h3>
+              <ul class="plan-details">
+                <li><span>ปริมาณการส่ง (ครั้ง)</span><strong>1,080,000</strong></li>
+                <li><span>ราคา/เครดิต</span><strong>฿0.23</strong></li>
+                <li><span>อายุการใช้งาน (เดือน)</span><strong>36 เดือน</strong></li>
+                <li><span>จำนวนชื่อผู้ส่ง</span><strong>ไม่จำกัด</strong></li>
+              </ul>
+              <ul class="plan-features">
+                <li>SMS Tracking</li>
+                <li>OTP Ready to use</li>
+                <li>เจ้าหน้าที่ดูแลส่วนตัว</li>
+              </ul>
+              <button class="btn btn-featured full">ซื้อเลย</button>
+            </article>
+            <article class="plan">
+              <p class="plan-label">แพ็กเกจ</p>
+              <h3 class="plan-price">฿500,000</h3>
+              <ul class="plan-details">
+                <li><span>ปริมาณการส่ง (ครั้ง)</span><strong>2,500,000</strong></li>
+                <li><span>ราคา/เครดิต</span><strong>฿0.20</strong></li>
+                <li><span>อายุการใช้งาน (เดือน)</span><strong>36 เดือน</strong></li>
+                <li><span>จำนวนชื่อผู้ส่ง</span><strong>ไม่จำกัด</strong></li>
+              </ul>
+              <ul class="plan-features">
+                <li>SMS Tracking</li>
+                <li>OTP Ready to use</li>
+                <li>เจ้าหน้าที่ดูแลส่วนตัว</li>
+              </ul>
+              <button class="btn btn-primary full">ซื้อเลย</button>
+            </article>
+            <article class="plan">
+              <p class="plan-label">แพ็กเกจ</p>
+              <h3 class="plan-price">฿1,000,000</h3>
+              <ul class="plan-details">
+                <li><span>ปริมาณการส่ง (ครั้ง)</span><strong>5,800,000</strong></li>
+                <li><span>ราคา/เครดิต</span><strong>฿0.17</strong></li>
+                <li><span>อายุการใช้งาน (เดือน)</span><strong>36 เดือน</strong></li>
+                <li><span>จำนวนชื่อผู้ส่ง</span><strong>ไม่จำกัด</strong></li>
+              </ul>
+              <ul class="plan-features">
+                <li>SMS Tracking</li>
+                <li>OTP Ready to use</li>
+                <li>เจ้าหน้าที่ดูแลส่วนตัว</li>
+              </ul>
+              <button class="btn btn-primary full">ซื้อเลย</button>
             </article>
           </div>
           <div class="advisor">

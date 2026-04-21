@@ -9,9 +9,14 @@ faqItems.forEach((item) => {
 });
 
 const tabs = document.querySelectorAll(".tab");
+const panels = document.querySelectorAll(".service-panel");
 tabs.forEach((tab) => {
   tab.addEventListener("click", () => {
+    const target = tab.dataset.target;
     tabs.forEach((t) => t.classList.remove("active"));
     tab.classList.add("active");
+    panels.forEach((p) => {
+      p.classList.toggle("active", p.dataset.panel === target);
+    });
   });
 });
