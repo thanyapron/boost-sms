@@ -875,7 +875,7 @@ body {
 .plan {
   border: 0;
   border-radius: 0;
-  padding: 30px 32px;
+  padding: 22px 24px;
   position: relative;
   background: transparent;
   display: flex;
@@ -889,7 +889,7 @@ body {
 }
 
 .plan-price {
-  margin: 4px 0 18px;
+  margin: 2px 0 14px;
   font-size: 26px;
   font-weight: 700;
   color: var(--ink);
@@ -898,12 +898,12 @@ body {
 
 .plan-details {
   list-style: none;
-  padding: 0 0 18px;
-  margin: 0 0 16px;
+  padding: 0 0 14px;
+  margin: 0 0 12px;
   border-bottom: 1px dashed #e1e6f2;
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 6px;
 }
 
 .plan-details li {
@@ -922,10 +922,10 @@ body {
 .plan-features {
   list-style: none;
   padding: 0;
-  margin: 0 0 22px;
+  margin: 0 0 16px;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 8px;
 }
 
 .plan-features li {
@@ -945,30 +945,29 @@ body {
   width: 18px;
   height: 18px;
   border-radius: 50%;
-  background: #E6F9FF url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%2333D9FF'><path d='M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z'/></svg>") no-repeat center/11px;
+  background: rgba(51, 217, 255, 0.15) url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%2333D9FF'><path d='M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z'/></svg>") no-repeat center/11px;
 }
 
 .plan .btn {
   margin-top: auto;
   padding: 0 16px;
   font-weight: 600;
+  height: 50px;
 }
 
 .plan.featured {
-  background: linear-gradient(180deg, #3559ff 0%, #1a3deb 100%);
+  background: #1D4CF3;
   color: #fff;
   border: 0;
-  border-radius: 22px;
-  padding: 30px 32px;
-  margin: -60px -6px 70px;
-  box-shadow:
-    0 0 0 6px rgba(97, 130, 255, 0.22),
-    0 30px 60px -10px rgba(24, 65, 255, 0.55);
+  border-radius: 32px;
+  padding: 22px 24px;
+  margin: -60px 0 70px;
+  box-shadow: 0 0 30px 2px rgba(62, 236, 255, 0.5);
   z-index: 2;
 }
 
 .plan.featured .plan-label {
-  color: rgba(255, 255, 255, 0.75);
+  color: #fff;
 }
 
 .plan.featured .plan-price {
@@ -976,11 +975,11 @@ body {
 }
 
 .plan.featured .plan-details {
-  border-bottom-color: rgba(255, 255, 255, 0.18);
+  border-bottom-color: rgba(255, 255, 255, 0.3);
 }
 
 .plan.featured .plan-details li {
-  color: rgba(255, 255, 255, 0.78);
+  color: #fff;
 }
 
 .plan.featured .plan-details strong {
@@ -991,8 +990,12 @@ body {
   color: #fff;
 }
 
+.plan.featured .plan-features li::before {
+  background-color: #E6F9FF;
+}
+
 .btn-featured {
-  background: rgba(255, 255, 255, 0.22);
+  background: rgba(255, 255, 255, 0.3);
   color: #fff;
   backdrop-filter: blur(4px);
 }
@@ -1032,7 +1035,6 @@ body {
   align-items: center;
   justify-content: flex-end;
   gap: 0;
-  transform: translateX(30px);
 }
 
 .advisor-content h3 {
@@ -1075,13 +1077,14 @@ body {
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  background: #E6F9FF url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%2333D9FF'><path d='M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z'/></svg>") no-repeat center/12px;
+  background: rgba(51, 217, 255, 0.15) url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%2333D9FF'><path d='M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z'/></svg>") no-repeat center/12px;
 }
 
 .advisor-contact {
   background: #FFE538;
   color: #1a1a1a;
-  padding: 18px 30px;
+  padding: 0 30px;
+  height: 50px;
   font-weight: 700;
   font-size: 17px;
   border-radius: 999px;
@@ -1107,9 +1110,9 @@ body {
 
 .advisor-visual {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: flex-end;
-  margin-left: -60px;
+  margin: -44px -56px -44px -60px;
 }
 
 .advisor-image {
