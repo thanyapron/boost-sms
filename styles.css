@@ -13,9 +13,13 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
-  font-family: "Noto Sans Thai", "Noto Sans", "Sukhumvit Set", "Thonburi", -apple-system, "Segoe UI", system-ui, sans-serif;
+  font-family: "Noto Sans Thai", sans-serif;
   font-size: 18px;
   font-weight: 400;
   line-height: 29.7px;
@@ -885,14 +889,15 @@ body {
 .plan-label {
   margin: 0;
   font-size: 13px;
-  color: #8b93ac;
+  font-weight: 600;
+  color: #0F172B;
 }
 
 .plan-price {
   margin: 2px 0 14px;
   font-size: 26px;
   font-weight: 700;
-  color: var(--ink);
+  color: #0F172B;
   letter-spacing: -0.5px;
 }
 
@@ -900,7 +905,7 @@ body {
   list-style: none;
   padding: 0 0 14px;
   margin: 0 0 12px;
-  border-bottom: 1px dashed #e1e6f2;
+  border-bottom: 1px solid #c5cbdb;
   display: flex;
   flex-direction: column;
   gap: 6px;
@@ -910,12 +915,13 @@ body {
   display: flex;
   justify-content: space-between;
   gap: 12px;
-  font-size: 12.5px;
-  color: #7b829c;
+  font-size: 14px;
+  font-weight: 300;
+  color: #0F172B;
 }
 
 .plan-details strong {
-  color: var(--ink);
+  color: #0F172B;
   font-weight: 600;
 }
 
@@ -932,7 +938,8 @@ body {
   position: relative;
   padding-left: 26px;
   font-size: 13px;
-  color: var(--ink);
+  font-weight: 300;
+  color: #0F172B;
   line-height: 1.4;
 }
 
@@ -975,7 +982,7 @@ body {
 }
 
 .plan.featured .plan-details {
-  border-bottom-color: rgba(255, 255, 255, 0.3);
+  border-bottom-color: rgba(255, 255, 255, 0.5);
 }
 
 .plan.featured .plan-details li {
@@ -991,7 +998,7 @@ body {
 }
 
 .plan.featured .plan-features li::before {
-  background-color: #E6F9FF;
+  background-color: rgba(62, 236, 255, 0.35);
 }
 
 .btn-featured {
@@ -1008,12 +1015,14 @@ body {
   position: absolute;
   top: 18px;
   right: 18px;
-  background: #ffd74d;
-  color: #1a1a1a;
+  background: #FFE958;
+  color: #0028C3;
   padding: 4px 12px;
   border-radius: 999px;
   font-size: 12px;
   font-weight: 600;
+  min-width: 72px;
+  text-align: center;
 }
 
 .advisor {
@@ -1135,17 +1144,32 @@ body {
   letter-spacing: -0.3px;
 }
 
+.partner-head {
+  text-align: center;
+}
+
+.partner-head .eyebrow {
+  max-width: none;
+  margin: 0;
+  text-align: center;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 400;
+}
+
 .partner-brand-logo {
   display: block;
-  margin: 12px auto 0;
+  margin: 20px auto 0;
   height: 72px;
   width: auto;
 }
 
 .partner-head p {
-  max-width: 980px;
-  margin: 18px auto 0;
-  color: #d8def2;
+  max-width: 1100px;
+  margin: 28px auto 0;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 400;
   line-height: 1.7;
 }
 
@@ -1321,7 +1345,7 @@ body {
 
 .reviews-dot.active {
   width: 44px;
-  background: #1D4CF3;
+  background: #5BE8FF;
 }
 
 .faq .section-title h2 {
@@ -1359,7 +1383,7 @@ body {
   padding: 22px 28px;
   text-align: left;
   font: inherit;
-  font-size: 16px;
+  font-size: 17px;
   color: #1a2340;
   display: flex;
   justify-content: space-between;
@@ -1377,6 +1401,8 @@ body {
 .faq-a p {
   margin: 0;
   padding: 0 28px 22px;
+  font-size: 16px;
+  font-weight: 300;
   color: #5f6782;
   line-height: 1.6;
 }
@@ -1391,10 +1417,11 @@ body {
 
 .faq-q span {
   transition: transform 0.2s ease;
-  font-size: 22px;
-  color: #6b7389;
+  font-size: 24px;
+  color: #1a2340;
   font-weight: 300;
   flex-shrink: 0;
+  line-height: 1;
 }
 
 .blog-head {
@@ -1574,12 +1601,8 @@ a.blog-card:hover {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 28px;
-  height: 28px;
-  border-radius: 50%;
-  background: #EAFEFF;
   color: var(--blue);
-  font-size: 13px;
+  font-size: 16px;
 }
 
 .contact-divider {
@@ -2146,9 +2169,11 @@ a.blog-card:hover {
   transition: opacity 0.2s;
 }
 
-.social-icon svg {
+.social-icon svg,
+.social-icon img {
   width: 36px;
   height: 36px;
+  object-fit: contain;
 }
 
 .social-icon:hover {
