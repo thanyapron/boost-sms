@@ -10,7 +10,7 @@
       href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles.css?v=20260424aq" />
   </head>
   <body>
     <div class="page-shell">
@@ -20,13 +20,13 @@
         </a>
         <nav class="desktop-nav">
           <a href="#">หน้าแรก</a>
-          <a href="#">เกี่ยวกับเรา</a>
-          <a href="#">บริการของเรา</a>
-          <a href="#">แพ็กเกจ</a>
-          <a href="#">บทความ</a>
-          <a href="#">คู่มือ</a>
-          <a href="#">คำถามที่พบบ่อย</a>
-          <a href="#">ติดต่อฝ่ายขาย</a>
+          <a href="#about">เกี่ยวกับเรา</a>
+          <a href="#services">บริการของเรา</a>
+          <a href="#pricing">แพ็กเกจ</a>
+          <a href="#blog">บทความ</a>
+          <a href="#blog">คู่มือ</a>
+          <a href="#faq">คำถามที่พบบ่อย</a>
+          <a href="#contact">ติดต่อฝ่ายขาย</a>
         </nav>
         <div class="topbar-actions">
           <a class="nav-login" href="#">เข้าสู่ระบบ</a>
@@ -34,21 +34,28 @@
             สมัครฟรี
             <span class="arrow" aria-hidden="true">→</span>
           </button>
+          <button class="nav-toggle" aria-label="เมนู" aria-expanded="false" aria-controls="mobile-menu">
+            <span></span><span></span><span></span>
+          </button>
         </div>
+        <nav class="mobile-menu" id="mobile-menu" aria-label="เมนูหลัก">
+          <a href="#">เข้าสู่ระบบ</a>
+          <a href="#about">เกี่ยวกับเรา</a>
+          <a href="#services">บริการของเรา</a>
+          <a href="#pricing">แพ็กเกจ</a>
+          <a href="#blog">บทความ</a>
+          <a href="#blog">คู่มือ</a>
+          <a href="#faq">คำถามที่พบบ่อย</a>
+          <a href="#contact">ติดต่อฝ่ายขาย</a>
+        </nav>
       </header>
 
       <main>
         <section class="hero">
           <div class="hero-card">
             <div class="hero-copy">
-              <h1>
-                บริการส่ง SMS Marketing<br />
-                ออนไลน์อันดับ 1 ในไทย
-              </h1>
-              <p class="hero-lead">
-                ใช้งานง่าย ส่งได้รวดเร็ว แม่นยำ รองรับ OTP และการแจ้งเตือนทุกรูปแบบ
-                ควบคุมต้นทุนได้ชัดเจน พร้อมมาตรฐานระดับองค์กร
-              </p>
+              <h1>บริการส่ง<span class="only-desktop"> </span><br class="only-mobile" />SMS Marketing<br class="only-desktop" /><span class="only-mobile"> </span>ออนไลน์<br class="only-mobile" />อันดับ 1 ในไทย</h1>
+              <p class="hero-lead">ใช้งานง่าย ส่งได้รวดเร็ว แม่นยำ รองรับ OTP<br class="only-mobile" /><span class="only-desktop"> </span>และการแจ้งเตือนทุกรูปแบบ ควบคุมต้นทุน<br class="only-mobile" />ได้ชัดเจน พร้อมมาตรฐานระดับองค์กร</p>
               <div class="price-callout">
                 <p class="price-headline">
                   เริ่มต้นถูกสุดราคา <strong>฿0.17</strong> ต่อข้อความ
@@ -71,14 +78,20 @@
           </div>
 
           <div class="hero-stats">
-            <div class="stat"><strong>10M+</strong><span>SMS ส่งสำเร็จ</span></div>
-            <div class="stat"><strong>500+</strong><span>ธุรกิจไว้วางใจ</span></div>
-            <div class="stat"><strong>99.9%</strong><span>Uptime</span></div>
-            <div class="stat"><strong>&lt;3s</strong><span>ส่งถึงปลายทาง</span></div>
+            <div class="hero-stats-track">
+              <div class="stat"><strong>10M+</strong><span>SMS ส่งสำเร็จ</span></div>
+              <div class="stat"><strong>500+</strong><span>ธุรกิจไว้วางใจ</span></div>
+              <div class="stat"><strong>99.9%</strong><span>Uptime</span></div>
+              <div class="stat"><strong>&lt;3s</strong><span>ส่งถึงปลายทาง</span></div>
+              <div class="stat stat-clone" aria-hidden="true"><strong>10M+</strong><span>SMS ส่งสำเร็จ</span></div>
+              <div class="stat stat-clone" aria-hidden="true"><strong>500+</strong><span>ธุรกิจไว้วางใจ</span></div>
+              <div class="stat stat-clone" aria-hidden="true"><strong>99.9%</strong><span>Uptime</span></div>
+              <div class="stat stat-clone" aria-hidden="true"><strong>&lt;3s</strong><span>ส่งถึงปลายทาง</span></div>
+            </div>
           </div>
         </section>
 
-        <section class="sms-service section-blue">
+        <section class="sms-service section-blue" id="services">
           <div class="service-header">
             <h2>บริการ <span class="accent">SMS</span> ครบทุกความต้องการ</h2>
             <div class="pill-tabs" role="tablist">
@@ -92,10 +105,7 @@
           <div class="service-panel active" data-panel="websms">
             <div class="service-content">
               <div class="service-copy">
-                <p class="service-lead">
-                  ระบบส่งข้อความ SMS ผ่านหน้าเว็บโดยไม่ต้องเขียนโค้ด
-                  <br />รองรับการส่งข้อความจำนวนมากได้อย่างรวดเร็ว
-                </p>
+                <p class="service-lead">ระบบส่งข้อความ SMS<br class="only-mobile" /><span class="only-desktop"> </span>ผ่านหน้าเว็บโดยไม่ต้องเขียนโค้ด<br />รองรับการส่งข้อความจำนวนมากได้อย่างรวดเร็ว</p>
                 <div class="carrier-card">
                   <p class="carrier-title">ครอบคลุมทุกเครือข่ายในประเทศไทย</p>
                   <div class="carrier-logos">
@@ -138,12 +148,7 @@
                   ให้ระบบทำงานอัตโนมัติ ด้วยการเชื่อม API
                   <img src="assets/api-sparkle.png" alt="" class="sparkle" aria-hidden="true" />
                 </h3>
-                <p class="service-sub">
-                  ส่ง SMS ผ่านระบบของคุณได้ทันที ไม่ว่าจะเตือนชำระเงิน, แจ้งเตือน,
-                  สถานะคำสั่งซื้อ, แจ้งเตือนโปรโมชั่นพิเศษ หรือข้อความของคุณเองทุกรูปแบบ
-                  ประหยัดเวลาด้วยการเชื่อมต่อเพียงครั้งเดียว ปรึกษาทีมพัฒนาของเรา
-                  เพื่อรับคำแนะนำในการเชื่อมต่อได้ฟรี!
-                </p>
+                <p class="service-sub">ส่ง SMS ผ่านระบบของคุณได้ทันที ไม่ว่าจะเตือนชำระเงิน,<br class="only-mobile" /> แจ้งเตือน, สถานะคำสั่งซื้อ, แจ้งเตือนโปรโมชั่นพิเศษ<br class="only-mobile" /> หรือข้อความของคุณเองทุกรูปแบบ<br class="only-mobile" /> ประหยัดเวลาด้วยการเชื่อมต่อเพียงครั้งเดียว<br class="only-mobile" /> ปรึกษาทีมพัฒนาของเรา เพื่อรับคำแนะนำในการเชื่อมต่อได้ฟรี!</p>
                 <div class="service-ctas">
                   <button class="btn btn-outline-light">คู่มือการเชื่อมต่อ API</button>
                   <button class="btn btn-yellow">ปรึกษาทีมพัฒนา ฟรี !</button>
@@ -158,7 +163,10 @@
           <div class="service-panel" data-panel="report">
             <div class="report-subtitle">แดชบอร์ดรายงานผลการส่ง SMS แบบครบวงจร</div>
             <div class="service-visual report-visual-full">
-              <img src="assets/report-visual.png" alt="SMS report dashboard" />
+              <picture>
+                <source media="(max-width: 760px)" srcset="assets/report-visual-mobile.png" />
+                <img src="assets/report-visual.png" alt="SMS report dashboard" />
+              </picture>
             </div>
           </div>
         </section>
@@ -207,17 +215,14 @@
         <section class="award">
           <img src="assets/nbtc-seal.png" alt="ตรา กสทช" class="award-image" />
           <h3>ใช้งานได้อย่างมั่นใจด้วยมาตรฐาน กสทช.</h3>
-          <p>
-            ได้รับการรับรองมาตรฐานในการให้บริการส่งข้อความสั้น (Short Message Service: SMS)<br />
-            โดยสำนักงานคณะกรรมการกิจการกระจายเสียง กิจการโทรทัศน์ และกิจการโทรคมนาคมแห่งชาติ
-          </p>
+          <p>ได้รับการรับรองมาตรฐานในการให้บริการส่งข้อความสั้น<br />(Short Message Service: SMS)<br />โดยสำนักงานคณะกรรมการกิจการกระจายเสียง<br />กิจการโทรทัศน์ และกิจการโทรคมนาคมแห่งชาติ</p>
           <a href="#" class="award-link">ดูใบอนุญาต</a>
         </section>
 
-        <section class="pricing section-light">
+        <section class="pricing section-light" id="pricing">
           <div class="section-title center">
             <h2>เลือกแพ็กเกจ</h2>
-            <p class="pricing-subtitle">ให้เหมาะกับประเภทและปริมาณการใช้งานของคุณ</p>
+            <p class="pricing-subtitle">ให้เหมาะกับประเภทและปริมาณ<br class="only-mobile" />การใช้งานของคุณ</p>
           </div>
           <div class="pricing-rows">
             <div class="plan-row">
@@ -298,6 +303,7 @@
                 <button class="btn btn-primary full">ซื้อเลย</button>
               </article>
             </div>
+            <div class="plan-dots" aria-hidden="true"></div>
             <div class="plan-row">
               <article class="plan">
                 <p class="plan-label">แพ็กเกจ</p>
@@ -380,6 +386,7 @@
                 <button class="btn btn-primary full">ซื้อเลย</button>
               </article>
             </div>
+            <div class="plan-dots" aria-hidden="true"></div>
           </div>
           <div class="advisor">
             <div class="advisor-content">
@@ -387,8 +394,8 @@
               <p>สำหรับธุรกิจที่ส่ง SMS มากกว่า 1 ล้านข้อความ/เดือน ติดต่อเราเพื่อรับราคาพิเศษ</p>
               <ul class="advisor-features">
                 <li>จำนวนชื่อผู้ส่งไม่จำกัด</li>
-                <li>SMS Tracking</li>
                 <li>เจ้าหน้าที่ดูแลส่วนตัว</li>
+                <li>SMS Tracking</li>
                 <li>OTP Ready to use</li>
               </ul>
             </div>
@@ -406,21 +413,28 @@
           </div>
         </section>
 
-        <section class="partner section-blue">
+        <section class="partner section-blue" id="about">
           <div class="partner-head">
             <p class="eyebrow">เกี่ยวกับเรา</p>
             <img src="assets/logo-boostsms-white.png" alt="BoostSMS" class="partner-brand-logo" />
             <p>
-              ภารกิจของ BoostSMS คือการมอบโซลูชันการส่งข้อความระดับองค์กรที่ 'ง่าย เสถียร และวัดผลได้จริง'
-              เราไม่ได้เพียงแค่ขายโควต้าการส่ง แต่เรามุ่งมั่นสร้างระบบนิเวศ (Ecosystem)
-              ที่เป็นมากกว่าช่องทางสื่อสาร แต่คือโครงสร้างพื้นฐานที่พร้อมเติบโตและสเกลไปกับธุรกิจของคุณ
+              ภารกิจของ BoostSMS<br class="only-mobile" />
+              คือการมอบโซลูชันการส่งข้อความระดับองค์กรที่ 'ง่าย เสถียร<br class="only-mobile" />
+              และวัดผลได้จริง' เราไม่ได้เพียงแค่ขายโควต้าการส่ง<br class="only-mobile" />
+              แต่เรามุ่งมั่นสร้างระบบนิเวศ (Ecosystem)<br class="only-mobile" />
+              ที่เป็นมากกว่าช่องทางสื่อสาร แต่คือโครงสร้าง<br class="only-mobile" />
+              พื้นฐานที่พร้อมเติบโตและสเกลไปกับธุรกิจของคุณ
             </p>
             <p>
-              ตั้งแต่การส่งข้อความแรกเพื่อแจ้งเตือน ไปจนถึงการบริหารจัดการแคมเปญระดับล้านข้อความต่อวัน
-              เราตอบโจทย์ทุกความต้องการของธุรกิจด้วยสถาปัตยกรรมระบบที่ยืดหยุ่น เชื่อมต่อง่ายผ่าน API ประสิทธิภาพสูง
-              หรือจัดการผ่าน Web Console ที่ออกแบบมาให้ใช้งานง่าย ครบจบในที่เดียว
-              เพื่อช่วยให้ธุรกิจทุกระดับตั้งแต่อาชีพอิสระไปจนถึงองค์กรใหญ่
-              สามารถเชื่อมต่อกับลูกค้าได้อย่างแม่นยำและมีประสิทธิภาพสูงสุด
+              ตั้งแต่การส่งข้อความแรกเพื่อแจ้งเตือน<br class="only-mobile" />
+              ไปจนถึงการบริหารจัดการแคมเปญระดับล้านข้อความต่อวัน<br class="only-mobile" />
+              เราตอบโจทย์ทุกความต้องการของธุรกิจด้วยสถาปัตยกรรม<br class="only-mobile" />
+              ระบบที่ยืดหยุ่น เชื่อมต่อง่ายผ่าน API ประสิทธิภาพสูง<br class="only-mobile" />
+              หรือจัดการผ่าน Web Console ที่ออกแบบมาให้<br class="only-mobile" />
+              ใช้งานง่าย ครบจบในที่เดียว<br class="only-mobile" />
+              เพื่อช่วยให้ธุรกิจทุกระดับตั้งแต่อาชีพอิสระไปจนถึงองค์กรใหญ่<br class="only-mobile" />
+              สามารถเชื่อมต่อกับลูกค้าได้อย่างแม่นยำ<br class="only-mobile" />
+              และมีประสิทธิภาพสูงสุด
             </p>
           </div>
           <div class="map-glow">
@@ -430,14 +444,23 @@
             <h3>แบรนด์ที่ไว้วางใจเรา</h3>
             <p>โซลูชันของเราได้รับความไว้วางใจจากองค์กรชั้นนำ ที่เลือกใช้บริการเพื่อยกระดับประสิทธิภาพการสื่อสาร</p>
           </div>
-          <div class="partner-logos">
-            <img src="assets/partner-new-6.png" alt="Thunder Solution" class="partner-logo-image" />
-            <img src="assets/partner-new-1.png" alt="EasySlip" class="partner-logo-image" />
-            <img src="assets/partner-new-2.png" alt="Easy CRM" class="partner-logo-image" />
-            <img src="assets/partner-jetder.png" alt="Jetder" class="partner-logo-image" />
-            <img src="assets/partner-new-3.png" alt="Keenix" class="partner-logo-image" />
-            <img src="assets/partner-golfsim.png" alt="Easy Golfsim" class="partner-logo-image" />
-            <img src="assets/partner-shift.png" alt="SHIFT" class="partner-logo-image" />
+          <div class="partner-logos-viewport">
+            <div class="partner-logos">
+              <img src="assets/partner-new-6.png" alt="Thunder Solution" class="partner-logo-image" />
+              <img src="assets/partner-new-1.png" alt="EasySlip" class="partner-logo-image" />
+              <img src="assets/partner-new-2.png" alt="Easy CRM" class="partner-logo-image" />
+              <img src="assets/partner-jetder.png" alt="Jetder" class="partner-logo-image" />
+              <img src="assets/partner-new-3.png" alt="Keenix" class="partner-logo-image" />
+              <img src="assets/partner-golfsim.png" alt="Easy Golfsim" class="partner-logo-image" />
+              <img src="assets/partner-shift.png" alt="SHIFT" class="partner-logo-image" />
+              <img src="assets/partner-new-6.png" alt="" class="partner-logo-image partner-logo-clone" aria-hidden="true" />
+              <img src="assets/partner-new-1.png" alt="" class="partner-logo-image partner-logo-clone" aria-hidden="true" />
+              <img src="assets/partner-new-2.png" alt="" class="partner-logo-image partner-logo-clone" aria-hidden="true" />
+              <img src="assets/partner-jetder.png" alt="" class="partner-logo-image partner-logo-clone" aria-hidden="true" />
+              <img src="assets/partner-new-3.png" alt="" class="partner-logo-image partner-logo-clone" aria-hidden="true" />
+              <img src="assets/partner-golfsim.png" alt="" class="partner-logo-image partner-logo-clone" aria-hidden="true" />
+              <img src="assets/partner-shift.png" alt="" class="partner-logo-image partner-logo-clone" aria-hidden="true" />
+            </div>
           </div>
         </section>
 
@@ -532,7 +555,7 @@
           </div>
         </section>
 
-        <section class="faq section-light">
+        <section class="faq section-light" id="faq">
           <div class="section-title center">
             <h2>คำถามที่พบบ่อย</h2>
             <p class="faq-subtitle">เราได้รวมคำถามที่พบบ่อย พร้อมคำตอบที่คุณอยากรู้ เพื่อช่วยให้คุณเข้าใจการใช้งานและบริการของเราได้อย่างครบถ้วน</p>
@@ -622,7 +645,7 @@
           </div>
         </section>
 
-        <section class="contact section-light">
+        <section class="contact section-light" id="contact">
           <div class="contact-grid">
             <div class="contact-copy">
               <h2>ติดต่อสอบถาม</h2>
@@ -766,6 +789,6 @@
       <img src="assets/chat-popup.png" alt="Chat" />
     </a>
 
-    <script src="script.js"></script>
+    <script src="script.js?v=20260424g"></script>
   </body>
 </html>

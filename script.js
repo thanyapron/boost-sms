@@ -1,3 +1,33 @@
+const navToggle = document.querySelector(".nav-toggle");
+const mobileMenu = document.querySelector(".mobile-menu");
+
+const closeMobileMenu = () => {
+  navToggle?.classList.remove("active");
+  mobileMenu?.classList.remove("open");
+  navToggle?.setAttribute("aria-expanded", "false");
+};
+
+navToggle?.addEventListener("click", (e) => {
+  e.stopPropagation();
+  const isOpen = mobileMenu?.classList.toggle("open");
+  navToggle.classList.toggle("active", !!isOpen);
+  navToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+});
+
+mobileMenu?.querySelectorAll("a").forEach((link) => {
+  link.addEventListener("click", () => closeMobileMenu());
+});
+
+document.addEventListener("click", (e) => {
+  if (!mobileMenu?.classList.contains("open")) return;
+  if (mobileMenu.contains(e.target) || navToggle?.contains(e.target)) return;
+  closeMobileMenu();
+});
+
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") closeMobileMenu();
+});
+
 const faqItems = document.querySelectorAll(".faq-item");
 faqItems.forEach((item) => {
   const button = item.querySelector(".faq-q");
@@ -68,6 +98,36 @@ reviewsViewport?.addEventListener("mousemove", (e) => {
   const x = e.pageX - reviewsViewport.offsetLeft;
   const walk = (x - startX) * 1.4;
   reviewsViewport.scrollLeft = startScroll - walk;
+});
+
+document.querySelectorAll(".pricing-rows").forEach((rows) => {
+  rows.querySelectorAll(".plan-row").forEach((row) => {
+    const dots = row.nextElementSibling;
+    if (!dots || !dots.classList.contains("plan-dots")) return;
+    const plans = row.querySelectorAll(".plan");
+    dots.innerHTML = "";
+    plans.forEach((_, i) => {
+      const b = document.createElement("button");
+      b.type = "button";
+      b.setAttribute("aria-label", `แพ็กเกจที่ ${i + 1}`);
+      if (i === 0) b.classList.add("active");
+      b.addEventListener("click", () => {
+        const card = plans[i];
+        row.scrollTo({ left: card.offsetLeft - row.offsetLeft, behavior: "smooth" });
+      });
+      dots.appendChild(b);
+    });
+    const syncDots = () => {
+      const first = plans[0];
+      const second = plans[1];
+      if (!first || !second) return;
+      const step = second.offsetLeft - first.offsetLeft;
+      if (!step) return;
+      const idx = Math.round(row.scrollLeft / step);
+      dots.querySelectorAll("button").forEach((d, i) => d.classList.toggle("active", i === idx));
+    };
+    row.addEventListener("scroll", syncDots, { passive: true });
+  });
 });
 
 if (reviewsViewport && reviewsTrack) {
