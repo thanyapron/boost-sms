@@ -100,6 +100,35 @@ reviewsViewport?.addEventListener("mousemove", (e) => {
   reviewsViewport.scrollLeft = startScroll - walk;
 });
 
+const blogGrid = document.querySelector(".blog-grid");
+const blogDotsContainer = document.querySelector(".blog-dots");
+
+if (blogGrid && blogDotsContainer) {
+  const blogCards = blogGrid.querySelectorAll(".blog-card");
+  blogCards.forEach((_, i) => {
+    const b = document.createElement("button");
+    b.type = "button";
+    b.setAttribute("aria-label", `บทความที่ ${i + 1}`);
+    if (i === 0) b.classList.add("active");
+    b.addEventListener("click", () => {
+      const card = blogCards[i];
+      blogGrid.scrollTo({ left: card.offsetLeft - blogGrid.offsetLeft, behavior: "smooth" });
+    });
+    blogDotsContainer.appendChild(b);
+  });
+
+  const syncBlogDots = () => {
+    const first = blogCards[0];
+    const second = blogCards[1];
+    if (!first || !second) return;
+    const step = second.offsetLeft - first.offsetLeft;
+    if (!step) return;
+    const idx = Math.round(blogGrid.scrollLeft / step);
+    blogDotsContainer.querySelectorAll("button").forEach((d, i) => d.classList.toggle("active", i === idx));
+  };
+  blogGrid.addEventListener("scroll", syncBlogDots, { passive: true });
+}
+
 document.querySelectorAll(".pricing-rows").forEach((rows) => {
   rows.querySelectorAll(".plan-row").forEach((row) => {
     const dots = row.nextElementSibling;
