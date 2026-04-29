@@ -3641,7 +3641,7 @@ a.blog-card:hover {
   margin: 0 0 24px;
   font-size: 36px;
   font-weight: 700;
-  line-height: 1;
+  line-height: 1.4;
   color: #fff;
   letter-spacing: -0.3px;
 }
