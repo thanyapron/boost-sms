@@ -419,7 +419,7 @@ main section[id] {
   gap: 20px;
 }
 
-.stat-clone {
+.stat.stat-clone {
   display: none;
 }
 
@@ -519,7 +519,7 @@ main section[id] {
   padding: 10px 22px;
   border-radius: 999px;
   font-family: inherit;
-  font-size: 14px;
+  font-size: 20px;
   font-weight: 500;
   cursor: pointer;
   transition: background 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
@@ -743,27 +743,19 @@ main section[id] {
 
 .service-lead {
   margin: 0;
-  font-size: 18px;
+  font-size: 24px;
   line-height: 1.65;
   color: rgba(255, 255, 255, 0.92);
 }
 
 .carrier-card {
   margin-top: 28px;
-  padding: 28px 32px;
-  border-radius: 24px;
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.14);
-  box-shadow: 0 8px 20px rgba(0, 10, 60, 0.1);
+  filter: drop-shadow(0 22px 28px rgba(0, 0, 0, 0.35))
+    drop-shadow(0 6px 10px rgba(0, 0, 0, 0.2));
 }
 
 .carrier-title {
-  margin: 0 0 18px;
-  text-align: center;
-  font-size: 15px;
-  color: rgba(255, 255, 255, 0.88);
+  display: none;
 }
 
 .carrier-logos {
@@ -789,7 +781,7 @@ main section[id] {
 .service-features li {
   position: relative;
   padding-left: 20px;
-  font-size: 15px;
+  font-size: 20px;
   line-height: 1.55;
   color: rgba(255, 255, 255, 0.92);
 }
@@ -1206,15 +1198,15 @@ main section[id] {
 
 .advisor-contact {
   background: #FFE538;
-  color: #1a1a1a;
-  padding: 0 30px;
-  height: 50px;
+  color: #0F172B;
+  padding: 3px 26px 3px 3px;
+  height: 52px;
   font-weight: 700;
-  font-size: 17px;
+  font-size: 16px;
   border-radius: 999px;
   display: inline-flex;
   align-items: center;
-  gap: 14px;
+  gap: 12px;
   white-space: nowrap;
   box-shadow: none;
   position: relative;
@@ -1227,9 +1219,19 @@ main section[id] {
   transform: translateY(-1px);
 }
 
+.advisor-contact-icon-wrap {
+  width: 46px;
+  height: 46px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
 .advisor-contact-icon {
-  width: 20px;
-  height: 20px;
+  width: 100%;
+  height: 100%;
+  display: block;
 }
 
 .advisor-visual {
@@ -1243,6 +1245,174 @@ main section[id] {
   width: 100%;
   max-width: 360px;
   display: block;
+}
+
+.boost-banner {
+  position: relative;
+  overflow: hidden;
+  background: rgba(228, 38, 55, 0.93);
+  color: #fff;
+  padding: 64px 60px 72px;
+  isolation: isolate;
+}
+
+.boost-banner-media {
+  position: absolute;
+  inset: 0;
+  background-image: url("assets/boost-banner-bg.jpg");
+  background-size: cover;
+  background-position: center 30%;
+  mix-blend-mode: multiply;
+  opacity: 0.2;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.boost-banner-inner {
+  position: relative;
+  z-index: 1;
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.boost-banner-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+  margin-bottom: 32px;
+}
+
+.boost-banner-logo {
+  width: 184px;
+  height: 60px;
+  object-fit: contain;
+  object-position: left center;
+  display: block;
+}
+
+.boost-banner-tagline {
+  margin: 0;
+  font-size: 30px;
+  font-weight: 600;
+  font-style: italic;
+  line-height: 1.6;
+  letter-spacing: 0.01em;
+  text-align: right;
+  display: flex;
+  flex: 1;
+  height: 48px;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 8px;
+  color: #fff;
+}
+
+.boost-banner-bolt {
+  width: auto;
+  height: 38px;
+  flex-shrink: 0;
+  display: block;
+}
+
+.boost-letters {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  column-gap: 12px;
+  text-align: left;
+  margin-top: 4px;
+  align-items: end;
+}
+
+.boost-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.boost-letter {
+  width: auto;
+  height: 64px;
+  display: block;
+  margin: 0 0 14px;
+  object-fit: contain;
+  object-position: left bottom;
+}
+
+.boost-col h4 {
+  margin: 0 0 4px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #fff;
+  text-align: left;
+}
+
+.boost-col p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.45;
+  color: rgba(255, 255, 255, 0.95);
+  font-weight: 300;
+  text-align: left;
+}
+
+@media (max-width: 1100px) {
+  .boost-banner {
+    padding: 48px 32px 56px;
+  }
+  .boost-letter {
+    height: 52px;
+    margin-bottom: 10px;
+  }
+  .boost-letters {
+    gap: 18px;
+  }
+  .boost-col h4 {
+    font-size: 15px;
+  }
+  .boost-col p {
+    font-size: 14px;
+  }
+  .boost-banner-tagline {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 720px) {
+  .boost-banner {
+    padding: 40px 20px 44px;
+  }
+  .boost-banner-head {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 16px;
+  }
+  .boost-banner-logo {
+    width: 140px;
+    height: 46px;
+  }
+  .boost-banner-tagline {
+    font-size: 15px;
+  }
+  .boost-banner-bolt {
+    height: 28px;
+  }
+  .boost-letters {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+  .boost-letter {
+    height: 44px;
+    margin-bottom: 8px;
+  }
+  .boost-col h4 {
+    font-size: 16px;
+  }
+  .boost-col p {
+    font-size: 13px;
+  }
 }
 
 .partner {
@@ -1693,7 +1863,7 @@ a.blog-card:hover {
   margin: 0 0 10px;
   font-size: 17px;
   font-weight: 600;
-  color: #1a2340;
+  color: #E42637;
 }
 
 .contact-block p {
@@ -1739,26 +1909,27 @@ a.blog-card:hover {
 }
 
 .contact-form {
-  background: #fff;
-  border: 1px solid #eef1f8;
+  background: #E42637;
+  border: none;
   border-radius: 18px;
   padding: 32px;
   display: flex;
   flex-direction: column;
   gap: 20px;
-  box-shadow: 0 10px 30px rgba(16, 24, 40, 0.04);
+  box-shadow: 0 10px 30px rgba(228, 38, 55, 0.18);
+  color: #fff;
 }
 
 .contact-form-head h3 {
   margin: 0 0 6px;
-  font-size: 20px;
-  font-weight: 600;
-  color: #1a2340;
+  font-size: 22px;
+  font-weight: 700;
+  color: #fff;
 }
 
 .contact-form-head p {
   margin: 0;
-  color: #8b93aa;
+  color: rgba(255, 255, 255, 0.92);
   font-size: 14px;
 }
 
@@ -1775,15 +1946,13 @@ a.blog-card:hover {
 }
 
 .form-field > span {
-  font-size: 13px;
-  color: #1a2340;
+  font-size: 14px;
+  color: #fff;
   font-weight: 500;
 }
 
 .form-field em {
-  color: #e53935;
-  font-style: normal;
-  font-weight: 500;
+  display: none;
 }
 
 .form-field input,
@@ -1808,8 +1977,8 @@ a.blog-card:hover {
 .form-field input:focus,
 .form-field textarea:focus {
   outline: none;
-  border-color: var(--blue);
-  box-shadow: 0 0 0 3px rgba(4, 55, 237, 0.1);
+  border-color: #fff;
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.25);
 }
 
 .form-field textarea {
@@ -1819,28 +1988,50 @@ a.blog-card:hover {
 
 .contact-form-actions {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.contact-form-note {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.95);
+  font-size: 14px;
 }
 
 .btn-contact-submit {
-  height: 50px;
-  padding: 0 28px;
+  height: 52px;
+  padding: 6px 26px 6px 6px;
   border-radius: 999px;
-  border: 1px solid var(--blue);
+  border: none;
   background: #fff;
-  color: var(--blue);
-  font-size: 14px;
+  color: #1a2340;
+  font-size: 15px;
   font-weight: 500;
   display: inline-flex;
   align-items: center;
-  justify-content: center;
+  gap: 12px;
   cursor: pointer;
   transition: background 0.15s ease, color 0.15s ease;
 }
 
-.btn-contact-submit:hover {
-  background: var(--blue);
+.btn-contact-arrow {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #1a2340;
   color: #fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+.btn-contact-submit:hover {
+  background: #f5f5f5;
 }
 
 .map-section {
@@ -2525,7 +2716,7 @@ a.blog-card:hover {
   }
 
   .carrier-card {
-    padding: 22px 20px;
+    margin-top: 20px;
   }
 
   .service-panel[data-panel="otp"] {
@@ -2767,7 +2958,7 @@ a.blog-card:hover {
     min-width: 140px;
   }
 
-  .stat-clone {
+  .stat.stat-clone {
     display: flex;
   }
 
@@ -3099,11 +3290,16 @@ a.blog-card:hover {
     display: inline-flex;
     height: 46px;
     font-size: 15px;
-    padding: 0 22px;
+    padding: 3px 22px 3px 3px;
     gap: 10px;
     margin: 0;
     position: relative;
     z-index: 2;
+  }
+
+  .advisor-contact-icon-wrap {
+    width: 40px;
+    height: 40px;
   }
 
   .advisor-contact-icon {
@@ -4090,7 +4286,7 @@ a.blog-card:hover {
   }
 }
 
-@media (max-width: 900px) {
+@media (min-width: 761px) and (max-width: 900px) {
   .footer {
     padding: 40px 28px 28px;
   }
