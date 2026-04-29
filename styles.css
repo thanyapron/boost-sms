@@ -1401,17 +1401,37 @@ main section[id] {
   }
   .boost-letters {
     grid-template-columns: 1fr;
-    gap: 14px;
+    gap: 18px;
+  }
+  .boost-col {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    column-gap: 0;
+    row-gap: 6px;
+    align-items: end;
   }
   .boost-letter {
-    height: 44px;
-    margin-bottom: 8px;
+    height: 40px;
+    margin: 0;
+    grid-row: 1;
+    grid-column: 1;
+    align-self: center;
   }
   .boost-col h4 {
-    font-size: 16px;
+    font-size: 18px;
+    grid-row: 1;
+    grid-column: 2;
+    align-self: center;
+    margin-left: -2px;
   }
   .boost-col p {
-    font-size: 13px;
+    font-size: 14px;
+    grid-column: 1 / -1;
+    grid-row: 2;
+    line-height: 1.5;
+  }
+  .boost-h4-cap {
+    display: none;
   }
 }
 
