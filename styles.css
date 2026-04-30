@@ -45,7 +45,6 @@ body {
   justify-content: space-between;
   gap: 24px;
   padding: 18px 36px;
-  border-bottom: 1px solid var(--line);
   position: sticky;
   top: 0;
   z-index: 20;
@@ -206,12 +205,32 @@ main section[id] {
   color: var(--blue);
 }
 
-.btn-signup .arrow {
-  font-size: 15px;
+.btn-signup {
+  height: 56px;
+  padding: 6px 32px 6px 6px;
+  gap: 14px;
+}
+
+.btn-signup-arrow {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #fff;
+  color: var(--blue);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  flex-shrink: 0;
   transition: transform 0.2s ease;
 }
 
-.btn-signup:hover .arrow {
+.btn-signup-text {
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.btn-signup:hover .btn-signup-arrow {
   transform: translateX(3px);
 }
 
@@ -750,8 +769,7 @@ main section[id] {
 
 .carrier-card {
   margin-top: 28px;
-  filter: drop-shadow(0 22px 28px rgba(0, 0, 0, 0.35))
-    drop-shadow(0 6px 10px rgba(0, 0, 0, 0.2));
+  filter: drop-shadow(0 8px 14px rgba(0, 0, 0, 0.16));
 }
 
 .carrier-title {
@@ -766,7 +784,6 @@ main section[id] {
 
 .carrier-logos img {
   width: 100%;
-  max-width: 420px;
   display: block;
 }
 
