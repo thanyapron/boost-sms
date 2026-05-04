@@ -131,9 +131,6 @@ main section[id] {
 .btn-signup {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
-  height: 50px;
-  padding: 0 52px;
 }
 
 .nav-toggle {
@@ -205,10 +202,11 @@ main section[id] {
   color: var(--blue);
 }
 
-.btn-signup {
+.btn.btn-signup {
   height: 56px;
-  padding: 6px 32px 6px 6px;
-  gap: 14px;
+  padding: 0 28px 0 6px;
+  gap: 12px;
+  justify-content: flex-start;
 }
 
 .btn-signup-arrow {
@@ -371,7 +369,7 @@ main section[id] {
   align-items: center;
   gap: 10px;
   color: #3b4358;
-  font-size: 14px;
+  font-size: 16px;
 }
 
 .price-checks .check {
@@ -396,7 +394,7 @@ main section[id] {
 
 .hero-phone-wrap {
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-start;
   align-items: flex-end;
   position: relative;
   align-self: stretch;
@@ -585,7 +583,7 @@ main section[id] {
 .service-sub {
   margin: 14px 0 0;
   color: rgba(255, 255, 255, 0.78);
-  font-size: 15px;
+  font-size: 20px;
   line-height: 1.7;
   max-width: 520px;
 }
@@ -640,7 +638,7 @@ main section[id] {
 .otp-lead {
   position: absolute;
   top: 22%;
-  left: 8%;
+  left: 4%;
   width: 38%;
   margin: 0;
   font-size: 20px;
@@ -665,7 +663,7 @@ main section[id] {
 .otp-phone-img {
   position: absolute;
   bottom: 0;
-  left: 12%;
+  left: 7%;
   width: 27%;
   height: auto;
   z-index: 3;
@@ -675,7 +673,7 @@ main section[id] {
 .otp-envelope-wrap {
   position: absolute;
   top: 40%;
-  left: 35%;
+  left: 30%;
   width: 14%;
   z-index: 4;
   transform: rotate(-8deg);
@@ -1400,7 +1398,7 @@ main section[id] {
 
 @media (max-width: 720px) {
   .boost-banner {
-    padding: 40px 20px 44px;
+    display: none;
   }
   .boost-banner-head {
     flex-direction: column;
@@ -1509,11 +1507,12 @@ main section[id] {
 }
 
 .partner-trust p {
-  max-width: 720px;
+  max-width: none;
   margin: 12px auto 64px;
   color: #d8def2;
   line-height: 1.65;
-  font-size: 16px;
+  font-size: 20px;
+  white-space: nowrap;
 }
 
 .map-glow {
@@ -1681,11 +1680,12 @@ main section[id] {
 }
 
 .faq-subtitle {
-  max-width: 820px;
+  max-width: none;
   margin: 14px auto 0;
   color: #5f6782;
-  font-size: 16px;
+  font-size: 20px;
   line-height: 1.6;
+  white-space: nowrap;
 }
 
 .faq-list {
@@ -1926,13 +1926,17 @@ a.blog-card:hover {
 }
 
 .contact-phone {
-  display: inline-flex;
+  display: flex;
   align-items: center;
   gap: 10px;
   color: #1a2340;
   font-size: 16px;
   text-decoration: none;
   font-weight: 500;
+}
+
+.contact-phone + .contact-phone {
+  margin-top: 8px;
 }
 
 .contact-phone-icon {
@@ -2667,6 +2671,25 @@ a.blog-card:hover {
     margin: 0;
   }
 
+  .faq-subtitle {
+    white-space: normal;
+    font-size: 16px;
+  }
+
+  .faq-q {
+    font-size: 16px;
+  }
+
+  .service-header h2,
+  .section-title h2,
+  .partner h2,
+  .reviews-title h2,
+  .blog-head h2,
+  .contact-copy h2 {
+    font-weight: 600;
+    font-size: 28px;
+  }
+
   .topbar {
     padding: 12px 16px;
     gap: 12px;
@@ -2692,19 +2715,21 @@ a.blog-card:hover {
     height: 36px;
   }
 
-  .btn-signup {
+  .btn.btn-signup {
     height: 40px;
-    padding: 0 18px;
-    font-size: 14px;
+    padding: 0 14px 0 0;
     gap: 6px;
-  }
-
-  .btn-signup .arrow {
     font-size: 14px;
   }
 
-  .topbar .btn-signup {
-    padding: 0 18px;
+  .btn-signup-arrow {
+    width: 40px;
+    height: 40px;
+    font-size: 14px;
+  }
+
+  .btn-signup-text {
+    font-size: 14px;
   }
 
   .section-light,
@@ -2748,6 +2773,10 @@ a.blog-card:hover {
   .service-features {
     text-align: left;
     margin-top: 24px;
+  }
+
+  .service-features li {
+    font-size: 16px;
   }
 
   .service-dashboard {
@@ -2904,6 +2933,10 @@ a.blog-card:hover {
     margin: 18px 0 22px;
   }
 
+  .price-checks li {
+    font-size: 16px;
+  }
+
   .price-callout .btn {
     padding: 0 40px;
     height: 46px;
@@ -2950,7 +2983,13 @@ a.blog-card:hover {
   }
 
   .award p {
-    font-size: 14px;
+    font-size: 10px;
+    letter-spacing: -0.2px;
+    padding: 0 4px;
+  }
+
+  .award p br {
+    display: none;
   }
 
   .feature-layout {
@@ -3115,7 +3154,7 @@ a.blog-card:hover {
 
   .footer-top {
     grid-template-columns: 1fr;
-    gap: 36px;
+    gap: 24px;
   }
 
   .footer-brand-col {
@@ -3147,11 +3186,15 @@ a.blog-card:hover {
 
   .footer-heading {
     font-size: 16px;
-    margin-bottom: 20px;
+    margin: 0 0 12px;
   }
 
   .footer-list {
     gap: 8px;
+  }
+
+  .footer-col {
+    margin: 0;
   }
 
   .footer-list a {
@@ -3418,6 +3461,7 @@ a.blog-card:hover {
     line-height: 1.55;
     max-width: 100%;
     text-align: center;
+    white-space: normal;
   }
 
   .partner-logos-viewport {
